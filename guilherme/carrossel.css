@@ -1,0 +1,79 @@
+.carrossel-azul {
+    max-width: 600px;
+    margin: auto;
+    position: relative;
+}
+
+.imagem {
+    display: none;
+    width: 100%;
+    transition: opacity 0.5s ease;
+}
+
+.ativo {
+    display: block;
+    opacity: 1;
+}
+
+.controles {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.botao {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #b46262;
+    border: none;
+    border-radius: 20px;
+
+    
+}
+
+.botao:hover {
+    background-color: #8d0e0e9d;
+}
+
+.indicadores {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.indicador {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #201cec6c;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.indicador.ativo {
+    background-color: #7a61a8;
+}
+
+@media (max-width: 768px) {
+    .carrossel-container {
+        width: 100%;
+        padding: 10px;
+    }
+}
+h1{
+    border-color: #9c0e0e93;
+    border: 2px solid;
+    border-radius:10px;
+    background-color: #c9242463;
+    display: inline-block;
+    padding: auto;
+
+}
+body{
+    background-color: #b156567e;
+}
+.rodape{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}

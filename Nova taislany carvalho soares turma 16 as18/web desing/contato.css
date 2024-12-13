@@ -1,0 +1,77 @@
+/*reseta os estilos padroes */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgba(158, 76, 165, 0.5);
+
+}
+
+/* estilo do cabeçalho*/
+header{
+    background-color: rgba(196, 17, 231, 0.349);
+    color: white;
+    padding: 10px 0;
+    
+}
+.container {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding:0 20px;
+
+
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+
+}
+
+nav ul li {
+     margin-left: 20px;
+}
+
+nav ul li a {
+    color: rgb(121, 15, 219);
+    text-decoration: none;
+}
+.phone{
+    background-color: rgb(105, 53, 155);
+    color: antiquewhite;
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+/*estilo seção principal*/
+.section{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    background:linear-gradient(to right, rgba(75, 5, 206, 0.514), white);
+    padding: 50px 0;
+    border-radius: 20px;
+    max-width: 1200px;
+    margin:30px auto:
+    position: relative;
+}
+
+.text-container{
+    text-align:center;
+    color:white;
+}
+.status{
+    font: size 1.5em;
+    margin-bottom: 20px;
+    color: black;
+}
+.start-button{
+
+
+    
+}

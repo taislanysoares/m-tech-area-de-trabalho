@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="carrossel.css">
+    <title>Carrossel de Imagens</title>
+ 
+</head>
+<body>
+    <h1>Carrossel Nicolandia</h1>
+    <div class="carrossel-azul">
+        <img src="pexels-brett-sayles-3008100.jpg" class="imagem ativo" alt="Imagem 1">
+        <img src="pexels-igor-starkov-233202-785538.jpg" class="imagem" alt="Imagem 2">
+        <img src="pexels-hinso-698508 (1).jpg" class="imagem" alt="Imagem 3">
+    </div>
+
+    <div class="controles">
+        <button class="botao" onclick="mostrarImagem(-1)">Anterior</button>
+        <button class="botao" onclick="mostrarImagem(1)">Próxima</button>
+    </div>
+
+    <div class="indicadores">
+        <span class="indicador" onclick="mudarImagem(0)"></span>
+        <span class="indicador" onclick="mudarImagem(1)"></span>
+        <span class="indicador" onclick="mudarImagem(2)"></span>
+    </div>
+    <footer>
+        <div class="rodape">
+            <div class="texto">
+                <p class="p1">Desenvolvido por: Taislany</p1>
+                <p class="p1">Local:Santa Maria Sul</p>
+                <p class="p1">Telefone:92346025</p>  
+            </div>
+        </div>
+
+  
+  
+    </footer>
+
+    <script>
+        let indiceAtual = 0;
+        const imagens = document.getElementsByClassName('imagem');
+        const indicadores = document.getElementsByClassName('indicador');
+
+        function mostrarImagem(direcao) {
+            imagens[indiceAtual].classList.remove('ativo');
+            indicadores[indiceAtual].classList.remove('ativo');
+            indiceAtual = (indiceAtual + direcao + imagens.length) % imagens.length;
+            imagens[indiceAtual].classList.add('ativo');
+            indicadores[indiceAtual].classList.add('ativo');
+        }
+
+        function mudarImagem(indice) {
+            mostrarImagem(indice - indiceAtual);
+        }
+
+        //automática a cada 5 segundos
+        setInterval(function() {
+            mostrarImagem(1);
+        }, 5000);
+    </script>
+</body>
+</html>

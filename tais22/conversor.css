@@ -1,0 +1,32 @@
+body{
+    background-image:url(pexels-digitalbuggu-190048.jpg) ;
+    justify-content: center;/*centrializar os intens no center*/
+    background-size: cover;/*faz com q a area do fundo ocupa todo area do elemento*/
+    align-items: center;/*alinha os itens tudo no center*/
+    align-content: center;/*alinha os no center*/
+}
+
+h2{
+    color: rgb(233, 16, 16); /*define a cor do texto do elemento */
+}
+p{
+    color: aliceblue;/*define a cor do texto do elemento*/
+}
+input{
+    background-color: rgb(116, 191, 204); /*configura a cor de fundo*/
+    padding: 20px;/*espaçamento externo*/
+    border-radius: 20px;/*que deixa a curvatura fina*/
+}
+button{
+    color: rgb(238, 18, 18); /*define a cor do texto e dos butões*/
+    padding: 20px;
+    border-radius: 20px;
+}
+footer{
+    display: flex;/*define o rodape*/
+    bottom: 0;/*posiciona o rodape no fundo*/
+    position: fixed;/*fixa o rodape na parte inferior da janela*/
+}
+p{
+    color: rgb(78, 226, 214);
+}

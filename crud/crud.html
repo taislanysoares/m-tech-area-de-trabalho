@@ -1,0 +1,119 @@
+    <!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>esqueleto do sistema</title>
+        <link rel="sthilet"
+        
+
+    </head>
+    <body>
+        <h2>Esqueleto crud</h2>
+
+        <form id="Formulario">
+            
+            <input type="text" id="nome" placeholder="nome" required>
+            <input type="date" id="datanascimento"required>
+            <input type="email" id="email"placeholder="E-mail"required>
+            <input type="submit">adicionar</button>
+        </form>
+        <table>
+            <thead>
+                <tr>
+                    <th>nome</th>
+                    <th>data</th>
+                    <th>e-mail</th>
+                    <th>ações</th>
+                </tr>
+            </thead>
+            <tboby id="corpotabela"></tboby>
+        </table>
+    
+        <script
+            let pessoas = []
+            
+            document.getElementById(´formulario´).addEventlistener(´submit´, function (evento) {
+                evento.preventDefault();
+                adicionarpessoa();      
+  });
+
+
+            function renderizarTabela() { 
+                const corpoTabela = document.getElementById(´corpoTabela´);
+                corpoTabela.innerHTML =´´;
+
+                pessoas.forEach((pessoa, indice) => {
+                    const linha = document.createElement ('tr');
+
+                    const celulaNome = document.createElement('td');
+                    celulaNome.textContent = pessoa.nome;
+                    linha.appendchild(celulaNome);
+
+                    const celulaDataNascimento = document.createElement('td')
+                    celulaDataNascimento.textContent = pessoa.datanascimento;
+                    linha.appendChild(celulaDataNascimento);
+
+                    const celulaEmail = document.createElement('td');
+                    celulaEmail.textContent = pessoa.email;
+                    linha.appendChild(celulaEmail);
+
+                    const celulaAcoes = document.createElement('td')
+                      
+                    const botaoEditar = document.createElement('button')
+                    botcaoEditar.textContent = 'Editar';
+                    botaoEditar.onclick = () => editarPessoa(indice);
+                    celulaAcoes.appendChild(botaoEditar);
+
+                    const botaoExcluir = document.createElement('button')
+                    botaoExcluir.textContent = 'Excluir';
+                    botaoExcluir.onclick = () => excluirPessoa(indice);
+                    celulaAcoes.appendChild(botaoExcluir);
+
+                    linha.appendChild(celulaAcoes);
+                    corpoTabela.appendChild(linha);
+                })
+            }       
+            function adicionarpessoa(){
+     const nome = document.getElementById('nome').valeu.trim();
+     const datanascimento = document.getElementById('datanascimento').valeu.trim();
+   const email= document.getElementById('email').valeu.trim();
+
+    if(nome && dataNacimento && email){
+         pessoas.push({nome,dataNacimento,email});
+         document.getElementById('formulario').reset();
+         renderizarTabela();
+    } else { 
+         alert('preencha todos os campos!');
+    }
+}
+  
+function editarPessoa(indice){
+    const pessoa = pessoas [indice];
+    const novoNome = prompt ('editar o nome:', pessoa.nome)
+    const novaDataNascimento = promt (' editar a data de nascimento:', pessoa.datanacimento);
+    const novoEmail = prompt('editar o email:',pessoa.email);
+    
+    if (novoNome && novaDataNascimento && novoEmail){
+        pessoas [indice] = {nome: novoNome, dsataNacimento: novaDataNascimento,email: novoEmail};
+        renderizarTabela();
+    }
+}
+
+function excluirPessoa(indice){
+    if(confirm('tem certeza que deseja excluir esse registro?')){
+        pessoas.splice(indice,1);
+        renderizarTabela();
+    }
+}
+ renderizarTabela();
+
+
+ )
+
+}
+}      
+                }
+            }
+</script>
+ 
